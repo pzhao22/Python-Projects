@@ -131,6 +131,7 @@ class NotGate(UnaryGate):
             return 1
         else:
             return 0
+
 # Special case - gate for input values with no connected gates
 class Input(UnaryGate):
     def __init__(self,n):
@@ -175,8 +176,11 @@ def main():
     c10 = Connector(And2,Or1)
 
 
+    InputA.get_pin()
+    InputB.get_pin()
+    InputC.get_pin()
     print(Xor2.get_output())
-    print(Or1.get_output())
+    print(And2.get_output())
     
 main()
 
